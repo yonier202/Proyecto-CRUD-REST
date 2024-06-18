@@ -1,25 +1,11 @@
 {
   "clientes": [
     {
-      "nombre": "Juan NUEVO!",
-      "email": "correo2@correo.com",
-      "telefono": "12",
-      "empresa": "12212",
-      "id": "26"
-    },
-    {
-      "id": "0f9a",
-      "nombre": "asdasd",
-      "email": "yonier202@gmail.com",
-      "telefono": "3142933057",
-      "empresa": "USCO"
-    },
-    {
-      "id": "0aea",
       "nombre": "Antonio",
-      "email": "u20212199841@usco.edu.co",
-      "telefono": "68465",
-      "empresa": "Usco"
+      "email": "fc089609@gmail.com",
+      "telefono": "456465",
+      "empresa": "usco",
+      "id": "c109"
     }
   ]
 }

@@ -15,3 +15,9 @@ export function MostrarAlerta(mj) {
         }, 3000);
     }
 }
+
+export function validar(cliente) {
+        
+    //revisa que cada llave del objeto tenga algun valor
+   return (!Object.values(cliente).every(input => input !== ""));
+}

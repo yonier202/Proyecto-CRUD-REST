@@ -1,4 +1,4 @@
-import {MostrarAlerta} from './funciones.js';
+import {MostrarAlerta, validar} from './funciones.js';
 import {nuevoCliente} from './API.js';
 (function() {
     const formulario = document.querySelector('#formulario');
@@ -16,7 +16,8 @@ import {nuevoCliente} from './API.js';
             nombre: nombre,
             email: email,
             telefono: telefono,
-            empresa: empresa
+            empresa: empresa,
+    
         }
 
         if (validar(cliente)) {
@@ -26,10 +27,6 @@ import {nuevoCliente} from './API.js';
         nuevoCliente(cliente);
     }
 
-    function validar(cliente) {
-        
-        //revisa que cada llave del objeto tenga algun valor
-       return (!Object.values(cliente).every(input => input !== ""));
-    }
+    
 
 })();

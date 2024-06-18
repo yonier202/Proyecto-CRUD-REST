@@ -1,9 +1,11 @@
-import {obtenerClientes} from './API.js';
+import {obtenerClientes, eliminarCliente} from './API.js';
 
 (function () {
     const listado = document.querySelector('#listado-clientes');
 
     document.addEventListener('DOMContentLoaded', mostrarClientes);
+
+    listado.addEventListener('click', confirmarEliminar)
 
     async function mostrarClientes() {
         //espera hasta que ejcute el prommise
@@ -31,6 +33,16 @@ import {obtenerClientes} from './API.js';
             `;
             listado.appendChild(row);
         });
-    }    
+    }
+    
+    function confirmarEliminar(e) {
+        if (e.target.classList.contains('eliminar')) {
+            const clienteId = e.target.dataset.cliente;
+            const confirmar = confirm(`Deseas eliminar este registro?`);
+            if (confirmar) {
+                eliminarCliente(clienteId);
+            }
+        }
+    }
 }    
 )();
